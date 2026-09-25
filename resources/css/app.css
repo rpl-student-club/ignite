@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 @import 'tailwindcss';
 
 @import 'tw-animate-css';
@@ -11,6 +11,7 @@
 @theme {
     --font-sans: "Space Mono", monospace;
     --font-grotesk: "Space Grotesk", sans-serif;
+    --font-jakarta: "Plus Jakarta Sans", sans-serif;
     --font-space-mono: "Space Mono", monospace;
 
     --radius-lg: var(--radius);
