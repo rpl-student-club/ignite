@@ -3,6 +3,7 @@ import AppLogoIcon from '@/components/app-logo-icon';
 import { home } from '@/routes';
 import type { AuthLayoutProps } from '@/types';
 import Navbar from '@/components/navbar';
+import AuthFooter from '@/components/auth-footer';
 
 export default function AuthSimpleLayout({
     children,
@@ -35,6 +36,7 @@ export default function AuthSimpleLayout({
                     {children}
                 </div>
             </div>
+            <AuthFooter />
         </div>
     );
 }

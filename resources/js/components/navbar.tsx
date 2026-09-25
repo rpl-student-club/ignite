@@ -17,7 +17,7 @@ export default function Navbar() {
 
     return (
         <nav className="w-full bg-[#FFF9ECF2] absolute top-0 z-999">
-            <div className="mx-auto px-12 h-20 flex items-center justify-between">
+            <div className="mx-auto px-8 md:px-12 h-20 flex items-center justify-between">
                 <div className="flex flex-col justify-center">
                     <span className="font-grotesk text-2xl font-black tracking-widest text-[#550017] leading-none">
                         IGNITE
