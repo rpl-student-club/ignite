@@ -42,7 +42,7 @@ export default function Footer() {
                                 I-Game
                             </Link>
                             <Link
-                                href="#pendaftaran-i-teach"
+                                href="/pendaftaran-i-teach"
                                 className="font-jakarta text-sm text-gray-200 transition-colors hover:text-white hover:underline md:text-base"
                             >
                                 Pendaftaran I-Teach

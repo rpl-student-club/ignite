@@ -105,7 +105,7 @@ export default function ITeach() {
                             </div>
                             <div className="mt-6 flex flex-wrap gap-4">
                                 <CtaButton
-                                    href="#register"
+                                    href="/pendaftaran-i-teach"
                                     primary
                                     icon={
                                         <Play className="size-3.5 fill-current" />
@@ -216,7 +216,7 @@ export default function ITeach() {
                         </p>
                         <div className="mt-6 flex flex-wrap justify-center gap-4">
                             <CtaButton
-                                href="#register"
+                                href="/pendaftaran-i-teach"
                                 primary
                                 icon={
                                     <Play className="size-3.5 fill-current" />
