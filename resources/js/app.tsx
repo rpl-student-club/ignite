@@ -6,6 +6,7 @@ import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
 import SettingsLayout from '@/layouts/settings/layout';
 import UserLayout from '@/layouts/user-layout';
+import BasicLayout from './layouts/basic-layout';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -18,6 +19,8 @@ void createInertiaApp({
             case name === 'i-game':
             case name === 'finalist':
                 return UserLayout;
+            case name === 'pendaftaran':
+                return BasicLayout;
             case name.startsWith('auth/'):
                 return AuthLayout;
             case name.startsWith('settings/'):
