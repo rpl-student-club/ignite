@@ -38,18 +38,18 @@ export default function Navbar() {
             ref={navRef}
             className="fixed top-0 left-0 z-50 w-full border-b-2 border-[#1E1E1E] bg-[#FFF9ECF2]"
         >
-            <div className="mx-auto flex h-20 items-center justify-between px-4 md:px-12">
+            <div className="mx-auto flex h-16 items-center justify-between px-4 md:px-10">
                 <div className="flex flex-col justify-center">
-                    <span className="font-grotesk text-xl leading-none font-black tracking-widest text-[#550017] md:text-2xl">
+                    <span className="font-grotesk text-lg leading-none font-black tracking-[0.08em] text-[#550017] md:text-xl">
                         IGNITE
                     </span>
-                    <span className="mt-1 text-[10px] font-bold tracking-widest text-[#574143] uppercase md:text-xs">
+                    <span className="mt-0.5 text-[8px] font-bold tracking-[0.18em] text-[#574143] uppercase md:text-[9px]">
                         DIGITAL ARCADE '26
                     </span>
                 </div>
 
                 {/* nav desktop */}
-                <div className="hidden items-center space-x-2 rounded-sm border-2 border-[#1E1E1E] bg-[#FAF5E9] p-1.5 shadow-[2px_2px_0px_0px_#1E1E1E] md:flex">
+                <div className="hidden items-center space-x-1 rounded-sm border-2 border-[#1E1E1E] bg-[#FAF5E9] p-1 shadow-[2px_2px_0px_0px_#1E1E1E] md:flex">
                     {navItems.map((item) => {
                         const isActive =
                             url === item.href || url.endsWith(item.href);
@@ -60,8 +60,8 @@ export default function Navbar() {
                                 href={item.href}
                                 className={`rounded-none px-4 py-2 text-xs font-bold tracking-widest uppercase transition-all duration-75 ${
                                     isActive
-                                        ? '-translate-x-px -translate-y-px border-2 border-[#1E1E1E] bg-[#800A2C] text-white shadow-[3px_3px_0px_0px_#1E1E1E]'
-                                        : 'text-[#5C061C] hover:-translate-x-px hover:-translate-y-px hover:border-2 hover:border-[#1E1E1E] hover:bg-[#800A2C] hover:text-white hover:shadow-[3px_3px_0px_0px_#1E1E1E] active:translate-x-px active:translate-y-px active:shadow-[1px_1px_0px_0px_#1E1E1E]'
+                                        ? '-translate-x-px -translate-y-px border-2 border-[#1E1E1E] bg-[#800A2C] px-3 py-1.5 text-[10px] text-white shadow-[3px_3px_0px_0px_#1E1E1E]'
+                                        : 'px-3 py-1.5 text-[10px] text-[#5C061C] hover:-translate-x-px hover:-translate-y-px hover:border-2 hover:border-[#1E1E1E] hover:bg-[#800A2C] hover:text-white hover:shadow-[3px_3px_0px_0px_#1E1E1E] active:translate-x-px active:translate-y-px active:shadow-[1px_1px_0px_0px_#1E1E1E]'
                                 } `}
                             >
                                 {item.name}
@@ -72,8 +72,8 @@ export default function Navbar() {
 
                 {/* desktop login button */}
                 <div className="hidden md:block" onClick={handleLoginClicked}>
-                    <button className="flex cursor-pointer items-center space-x-2 rounded-none border-2 border-[#1A1A1A] bg-[#D4A000] px-5 py-3.5 text-sm font-bold tracking-widest text-[#1A1A1A] shadow-[4px_4px_0px_0px_#1A1A1A] transition-all duration-75 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-[#E5B100] hover:shadow-[6px_6px_0px_0px_#1A1A1A] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_#1A1A1A]">
-                        <Box className="h-4 w-4 stroke-[2.5]" />
+                    <button className="flex cursor-pointer items-center space-x-2 rounded-none border-2 border-[#1A1A1A] bg-[#D4A000] px-4 py-3 text-[10px] font-bold tracking-widest text-[#1A1A1A] shadow-[4px_4px_0px_0px_#1A1A1A] transition-all duration-75 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-[#E5B100] hover:shadow-[6px_6px_0px_0px_#1A1A1A] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_#1A1A1A]">
+                        <Box className="h-3.5 w-3.5 stroke-[2.5]" />
                         <span>MASUK/LOGIN</span>
                     </button>
                 </div>
