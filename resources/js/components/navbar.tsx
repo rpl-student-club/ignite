@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
-import { router, Link, usePage } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 import { Menu, X } from 'lucide-react';
-import { login, home, iTeach, iGame } from '@/routes';
+import { home, iTeach, iGame } from '@/routes';
 
 export default function Navbar() {
     const { url } = usePage();
@@ -14,10 +14,10 @@ export default function Navbar() {
         { name: 'I-GAME', href: iGame().url },
     ];
 
-    const handleLoginClicked = () => {
-        setIsOpen(false);
-        router.visit(login());
-    };
+    // const handleLoginClicked = () => {
+    //     setIsOpen(false);
+    //     router.visit(login());
+    // };
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
