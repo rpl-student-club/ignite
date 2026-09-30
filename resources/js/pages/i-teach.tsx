@@ -72,8 +72,8 @@ export default function ITeach() {
             <div className="w-full overflow-x-hidden bg-[#fff9e9] text-[#172238]">
                 <main className="w-full">
                     <section className="bg-[#72001f] px-5 py-10 text-[#fff9e9] sm:px-8 lg:px-12 lg:py-12">
-                        <div className="mx-auto max-w-370">
-                            <p className="mb-3 font-mono text-[10px] font-bold tracking-[0.2em] text-[#e9b6bd]">
+                        <div className="mx-auto max-w-[1480px]">
+                            <p className="mb-3 font-mono text-xs font-bold tracking-[0.2em] text-[#e9b6bd]">
                                 IGNITE '26 • EDUCATION & DIGITAL INNOVATION
                                 COMPETITION
                             </p>
@@ -81,7 +81,7 @@ export default function ITeach() {
                                 ITEACH - INNOVATIVE TECHNOLOGY-ENHANCED TEACHING
                                 CHALLENGE
                             </h1>
-                            <p className="font-jakarta mt-5 max-w-4xl text-sm leading-6 text-[#f4cdd0] sm:text-base">
+                            <p className="font-jakarta mt-5 max-w-4xl text-base md:text-lg leading-relaxed text-[#f4cdd0]">
                                 Panggung kompetisi perancangan terobosan
                                 pedagogi digital tingkat nasional. Bangun
                                 prototype edutech paling imersif, pecahkan
@@ -108,14 +108,14 @@ export default function ITeach() {
                                     href="/pendaftaran-i-teach"
                                     primary
                                     icon={
-                                        <Play className="size-3.5 fill-current" />
+                                        <Play className="size-4 fill-current" />
                                     }
                                 >
                                     DAFTAR SEKARANG
                                 </CtaButton>
                                 <CtaButton
                                     href="#guidebook"
-                                    icon={<Download className="size-3.5" />}
+                                    icon={<Download className="size-4" />}
                                 >
                                     UNDUH GUIDEBOOK RESMI (PDF)
                                 </CtaButton>
@@ -129,7 +129,7 @@ export default function ITeach() {
                                 <h2 className="font-grotesk text-2xl font-bold sm:text-3xl">
                                     Rundown & Quest Timeline
                                 </h2>
-                                <p className="font-jakarta text-xs text-[#655b5b]">
+                                <p className="font-jakarta text-sm text-[#655b5b] md:text-base">
                                     Jadwal lengkap kegiatan dari start line
                                     hingga stage final perolehan hadiah.
                                 </p>
@@ -141,12 +141,12 @@ export default function ITeach() {
                                             key={label}
                                             className={`min-h-24 border-4 border-[#172238] p-3 ${featured ? 'bg-[#ffdba9]' : 'bg-[#f5eedc]'}`}
                                         >
-                                            <div className="flex items-center justify-between font-mono text-[10px] font-bold tracking-wide">
+                                            <div className="flex items-center justify-between font-mono text-xs font-bold tracking-wide">
                                                 <span>{label}</span>
                                                 <Icon className="size-4 text-[#657084]" />
                                             </div>
                                             <p
-                                                className={`mt-3 font-mono text-lg font-bold tracking-wide ${featured ? 'text-[#172238]' : 'text-[#647087]'}`}
+                                                className={`mt-3 font-mono text-lg font-bold tracking-wide sm:text-xl ${featured ? 'text-[#172238]' : 'text-[#647087]'}`}
                                             >
                                                 {date}
                                             </p>
@@ -160,13 +160,13 @@ export default function ITeach() {
                     <section className="bg-[#fff9e9] px-5 pb-12 sm:px-8 lg:px-12 lg:pb-16">
                         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.7fr]">
                             <div>
-                                <p className="font-mono text-[9px] font-bold tracking-[0.2em] text-[#72001f]">
+                                <p className="font-mono text-xs font-bold tracking-[0.2em] text-[#72001f]">
                                     DEBUG & SUPPORT MANUAL
                                 </p>
                                 <h2 className="font-grotesk mt-2 text-2xl leading-none font-bold text-[#72001f] uppercase sm:text-3xl">
                                     Frequently Asked Questions (FAQ)
                                 </h2>
-                                <p className="font-jakarta mt-4 text-xs leading-5 text-[#776e6b]">
+                                <p className="font-jakarta mt-4 text-sm leading-relaxed text-[#776e6b] md:text-base">
                                     Punya pertanyaan lebih lanjut? Hubungi
                                     narahubung resmi via Discord IGNITE.
                                 </p>
@@ -183,13 +183,13 @@ export default function ITeach() {
                                             }
                                             className="w-full"
                                         >
-                                            <CollapsibleTrigger className="font-jakarta flex w-full items-center justify-between gap-4 bg-[#f5eedc] px-4 py-3 text-left text-sm font-semibold text-[#292523] transition-colors hover:bg-[#f1e4c6]">
+                                            <CollapsibleTrigger className="font-jakarta flex w-full items-center justify-between gap-4 bg-[#f5eedc] px-4 py-3 text-left text-sm font-semibold text-[#292523] transition-colors hover:bg-[#f1e4c6] md:text-base">
                                                 {question}
                                                 <ChevronDown
                                                     className={`size-4 shrink-0 text-[#72001f] transition-transform ${isOpen ? 'rotate-180' : ''}`}
                                                 />
                                             </CollapsibleTrigger>
-                                            <CollapsibleContent className="font-jakarta border-t border-[#ded1b8] bg-[#f5eedc] px-4 pb-3 text-left text-xs leading-5 text-[#776e6b]">
+                                            <CollapsibleContent className="font-jakarta border-t border-[#ded1b8] bg-[#f5eedc] px-4 pb-3 text-left text-sm leading-relaxed text-[#776e6b] md:text-base">
                                                 Informasi lengkap akan diumumkan
                                                 melalui kanal resmi IGNITE '26.
                                             </CollapsibleContent>
@@ -207,7 +207,7 @@ export default function ITeach() {
                         <h2 className="font-grotesk mx-auto max-w-3xl text-3xl leading-tight font-bold uppercase sm:text-4xl">
                             Siapkan pasukanmu. Taklukkan arena ITeach 2026!
                         </h2>
-                        <p className="font-jakarta mx-auto mt-4 max-w-xl text-sm leading-6 text-[#f3cdd0]">
+                        <p className="font-jakarta mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#f3cdd0] md:text-lg">
                             Registrasi Gelombang 2 ditutup otomatis saat kuota
                             tercapai.
                             <br />
@@ -219,19 +219,19 @@ export default function ITeach() {
                                 href="/pendaftaran-i-teach"
                                 primary
                                 icon={
-                                    <Play className="size-3.5 fill-current" />
+                                    <Play className="size-4 fill-current" />
                                 }
                             >
                                 DAFTAR SEKARANG
                             </CtaButton>
                             <CtaButton
                                 href="#guidebook"
-                                icon={<Download className="size-3.5" />}
+                                icon={<Download className="size-4" />}
                             >
                                 UNDUH GUIDEBOOK RESMI (PDF)
                             </CtaButton>
                         </div>
-                        <p className="mt-5 font-mono text-[9px] font-bold tracking-widest text-[#f3cdd0]">
+                        <p className="mt-5 font-mono text-xs font-bold tracking-widest text-[#f3cdd0]">
                             DEADLINE: 15 OKTOBER 2026, 23:59 WIB • BIAYA
                             PENDAFTARAN: GRATIS
                         </p>
@@ -245,10 +245,10 @@ export default function ITeach() {
 function Meta({ label, value }: { label: string; value: string }) {
     return (
         <div className="border-b-2 border-[#eadfc9] p-2 last:border-b-0 sm:border-r-2 sm:border-b-0 sm:last:border-r-0">
-            <p className="font-mono text-[8px] font-bold tracking-widest text-[#665b56]">
+            <p className="font-mono text-xs font-bold tracking-widest text-[#665b56]">
                 {label}
             </p>
-            <p className="mt-1 font-mono text-xs font-bold sm:text-sm">
+            <p className="mt-1 font-mono text-sm font-bold sm:text-base">
                 {value}
             </p>
         </div>
@@ -269,11 +269,11 @@ function CtaButton({
     return (
         <a
             href={href}
-            className={`inline-flex items-center gap-2 border-4 border-[#172238] px-4 py-3 font-mono text-[10px] font-bold tracking-wide shadow-[4px_4px_0_#172238] transition-all duration-75 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#172238] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0_#172238] ${primary ? 'bg-[#f5c54e] text-[#172238]' : 'bg-[#fff9e9] text-[#172238]'}`}
+            className={`inline-flex items-center gap-2 border-4 border-[#172238] px-5 py-3.5 font-mono text-sm font-bold tracking-wide shadow-[4px_4px_0_#172238] transition-all duration-75 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#172238] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0_#172238] ${primary ? 'bg-[#f5c54e] text-[#172238]' : 'bg-[#fff9e9] text-[#172238]'}`}
         >
             {icon}
             {children}
-            <ArrowRight className="size-3" />
+            <ArrowRight className="size-4" />
         </a>
     );
 }

@@ -1,5 +1,6 @@
 import { Head } from '@inertiajs/react';
 import { ArrowRight, Download, Play } from 'lucide-react';
+import ComingSoon from '@/components/coming-soon';
 
 export default function IGame() {
     return (
@@ -9,14 +10,14 @@ export default function IGame() {
                 <main className="w-full">
                     <section className="bg-[#72001f] px-5 py-10 text-[#fff9e9] sm:px-8 lg:px-12 lg:py-12">
                         <div className="mx-auto max-w-[1480px]">
-                            <p className="mb-3 font-mono text-[10px] font-bold tracking-[0.2em] text-[#e9b6bd]">
+                            <p className="mb-3 font-mono text-xs font-bold tracking-[0.2em] text-[#e9b6bd]">
                                 IGNITE '26 • EDUCATION & DIGITAL INNOVATION
                                 COMPETITION
                             </p>
                             <h1 className="font-grotesk max-w-4xl text-4xl leading-[0.96] font-bold tracking-tight uppercase sm:text-5xl lg:text-6xl">
                                 IGAME - ISOLA GAME JAM
                             </h1>
-                            <p className="font-jakarta mt-5 max-w-5xl text-sm leading-6 text-[#f4cdd0] sm:text-base">
+                            <p className="font-jakarta mt-5 max-w-5xl text-base leading-relaxed text-[#f4cdd0] md:text-lg">
                                 Tantangan kilat merancang dan
                                 mengimplementasikan game indie original dalam 48
                                 jam berturut-turut sesuai tema misterius yang
@@ -45,25 +46,13 @@ export default function IGame() {
                                 <h2 className="font-grotesk text-2xl font-bold sm:text-3xl">
                                     Rundown & Quest Timeline
                                 </h2>
-                                <p className="font-jakarta text-xs text-[#655b5b]">
+                                <p className="font-jakarta text-sm text-[#655b5b] md:text-base">
                                     Jadwal lengkap kegiatan dari start line
                                     hingga stage final perolehan hadiah.
                                 </p>
                             </div>
-                            <div className="relative mt-4 flex min-h-40 items-center justify-center overflow-hidden border-4 border-[#172238] bg-[#f5eedc] px-5 py-8 shadow-[inset_0_0_12px_rgba(23,34,56,0.18)] sm:min-h-44">
-                                <span className="absolute top-2 left-2 size-2 rounded-full border border-[#172238] bg-[#f5c54e]" />
-                                <span className="absolute top-2 right-2 size-2 rounded-full border border-[#172238] bg-[#f5c54e]" />
-                                <span className="absolute bottom-2 left-2 size-2 rounded-full border border-[#172238] bg-[#f5c54e]" />
-                                <span className="absolute right-2 bottom-2 size-2 rounded-full border border-[#172238] bg-[#f5c54e]" />
-                                <div className="text-center">
-                                    <p className="font-grotesk text-5xl leading-none font-bold text-[#72001f] uppercase sm:text-6xl">
-                                        Coming Soon
-                                    </p>
-                                    <p className="mt-2 inline-block border-2 border-[#172238] bg-[#fff9e9] px-3 py-1 font-mono text-[9px] font-bold tracking-wide text-[#72001f] sm:text-xs">
-                                        TUNGGU YA, KAMI SEDANG MEMAKSIMALKAN
-                                        ACARANYA!!!
-                                    </p>
-                                </div>
+                            <div className="mt-4">
+                                <ComingSoon description="TUNGGU YA, KAMI SEDANG MEMAKSIMALKAN ACARANYA!!!" />
                             </div>
                         </div>
                     </section>
@@ -76,7 +65,7 @@ export default function IGame() {
                             Siapkan pasukanmu. Persiapkan rencanamu di IGame
                             2026!
                         </h2>
-                        <p className="font-jakarta mx-auto mt-4 max-w-xl text-sm leading-6 text-[#f3cdd0]">
+                        <p className="font-jakarta mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#f3cdd0] md:text-lg">
                             Registrasi akan otomatis terbuka pada masa
                             pendaftaran. Buatlah grup kamu sekarang dan
                             persiapkan ide untuk dikembangkan.
@@ -86,19 +75,19 @@ export default function IGame() {
                                 href="#register"
                                 primary
                                 icon={
-                                    <Play className="size-3.5 fill-current" />
+                                    <Play className="size-4 fill-current" />
                                 }
                             >
                                 DAFTAR SEKARANG
                             </CtaButton>
                             <CtaButton
                                 href="#guidebook"
-                                icon={<Download className="size-3.5" />}
+                                icon={<Download className="size-4" />}
                             >
                                 UNDUH GUIDEBOOK RESMI (PDF)
                             </CtaButton>
                         </div>
-                        <p className="mt-5 font-mono text-[9px] font-bold tracking-widest text-[#f3cdd0]">
+                        <p className="mt-5 font-mono text-xs font-bold tracking-widest text-[#f3cdd0]">
                             DEVELOPMENT PROGRESS • BIAYA PENDAFTARAN: GRATIS
                         </p>
                     </section>
@@ -111,10 +100,10 @@ export default function IGame() {
 function Meta({ label, value }: { label: string; value: string }) {
     return (
         <div className="border-b-2 border-[#eadfc9] p-2 last:border-b-0 sm:border-r-2 sm:border-b-0 sm:last:border-r-0">
-            <p className="font-mono text-[8px] font-bold tracking-widest text-[#665b56]">
+            <p className="font-mono text-xs font-bold tracking-widest text-[#665b56]">
                 {label}
             </p>
-            <p className="mt-1 font-mono text-xs font-bold sm:text-sm">
+            <p className="mt-1 font-mono text-sm font-bold sm:text-base">
                 {value}
             </p>
         </div>
@@ -135,11 +124,11 @@ function CtaButton({
     return (
         <a
             href={href}
-            className={`inline-flex items-center gap-2 border-4 border-[#172238] px-4 py-3 font-mono text-[10px] font-bold tracking-wide shadow-[4px_4px_0_#172238] transition-all duration-75 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#172238] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0_#172238] ${primary ? 'bg-[#f5c54e] text-[#172238]' : 'bg-[#fff9e9] text-[#172238]'}`}
+            className={`inline-flex items-center gap-2 border-4 border-[#172238] px-5 py-3.5 font-mono text-sm font-bold tracking-wide shadow-[4px_4px_0_#172238] transition-all duration-75 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#172238] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0_#172238] ${primary ? 'bg-[#f5c54e] text-[#172238]' : 'bg-[#fff9e9] text-[#172238]'}`}
         >
             {icon}
             {children}
-            <ArrowRight className="size-3" />
+            <ArrowRight className="size-4" />
         </a>
     );
 }
