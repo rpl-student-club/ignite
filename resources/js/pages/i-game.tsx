@@ -61,41 +61,6 @@ export default function IGame() {
                             </div>
                         </div>
                     </section>
-
-                    <section
-                        id="register"
-                        className="bg-[#8c062c] px-5 py-10 text-center text-[#fff9e9] sm:px-8 lg:py-12"
-                    >
-                        <h2 className="font-grotesk mx-auto max-w-3xl text-3xl leading-tight font-bold uppercase sm:text-4xl">
-                            Siapkan pasukanmu. Persiapkan rencanamu di IGame
-                            2026!
-                        </h2>
-                        <p className="font-jakarta mx-auto mt-4 max-w-xl text-base leading-relaxed text-[#f3cdd0] md:text-lg">
-                            Registrasi akan otomatis terbuka pada masa
-                            pendaftaran. Buatlah grup kamu sekarang dan
-                            persiapkan ide untuk dikembangkan.
-                        </p>
-                        <div className="mt-6 flex flex-wrap justify-center gap-4">
-                            <CtaButton
-                                href="#register"
-                                primary
-                                icon={
-                                    <Play className="size-4 fill-current" />
-                                }
-                            >
-                                DAFTAR SEKARANG
-                            </CtaButton>
-                            <CtaButton
-                                href="#guidebook"
-                                icon={<Download className="size-4" />}
-                            >
-                                UNDUH GUIDEBOOK RESMI (PDF)
-                            </CtaButton>
-                        </div>
-                        <p className="mt-5 font-mono text-xs font-bold tracking-widest text-[#f3cdd0]">
-                            DEVELOPMENT PROGRESS • BIAYA PENDAFTARAN: GRATIS
-                        </p>
-                    </section>
                 </main>
             </div>
         </>
