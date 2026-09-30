@@ -3,13 +3,15 @@ import { ArrowRight, Download, Play } from 'lucide-react';
 import ComingSoon from '@/components/coming-soon';
 
 export default function IGame() {
+    const isComingSoon = true;
+
     return (
         <>
             <Head title="I-Game Detail" />
             <div className="w-full overflow-x-hidden bg-[#fff9e9] text-[#172238]">
                 <main className="w-full">
                     <section className="bg-[#72001f] px-5 py-10 text-[#fff9e9] sm:px-8 lg:px-12 lg:py-12">
-                        <div className="mx-auto max-w-[1480px]">
+                        <div className="mx-auto max-w-370">
                             <p className="mb-3 font-mono text-xs font-bold tracking-[0.2em] text-[#e9b6bd]">
                                 IGNITE '26 • EDUCATION & DIGITAL INNOVATION
                                 COMPETITION
@@ -41,7 +43,7 @@ export default function IGame() {
                     </section>
 
                     <section className="px-5 py-6 sm:px-8 lg:px-12 lg:py-7">
-                        <div className="mx-auto max-w-[1480px] border-4 border-[#172238] bg-[#fff9e9] p-4 shadow-[6px_6px_0_#172238] sm:p-6 lg:p-7">
+                        <div className="mx-auto max-w-370 border-4 border-[#172238] bg-[#fff9e9] p-4 shadow-[6px_6px_0_#172238] sm:p-6 lg:p-7">
                             <div className="border-b-4 border-[#172238] pb-2">
                                 <h2 className="font-grotesk text-2xl font-bold sm:text-3xl">
                                     Rundown & Quest Timeline
@@ -52,7 +54,10 @@ export default function IGame() {
                                 </p>
                             </div>
                             <div className="mt-4">
-                                <ComingSoon description="TUNGGU YA, KAMI SEDANG MEMAKSIMALKAN ACARANYA!!!" />
+                                <ComingSoon
+                                    description="TUNGGU YA, KAMI SEDANG MEMAKSIMALKAN ACARANYA!!!"
+                                    isComingSoon={isComingSoon}
+                                />
                             </div>
                         </div>
                     </section>

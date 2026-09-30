@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { router, Link, usePage } from '@inertiajs/react';
-import { Box, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { login, home, iTeach, iGame } from '@/routes';
 
 export default function Navbar() {
@@ -70,13 +70,14 @@ export default function Navbar() {
                     })}
                 </div>
 
+                {/* ! DISABLED TEMPORARY */}
                 {/* desktop login button */}
-                <div className="hidden md:block" onClick={handleLoginClicked}>
+                {/* <div className="hidden md:block" onClick={handleLoginClicked}>
                     <button className="flex cursor-pointer items-center space-x-2 rounded-none border-2 border-[#1A1A1A] bg-[#D4A000] px-5 py-3.5 text-sm font-bold tracking-widest text-[#1A1A1A] shadow-[4px_4px_0px_0px_#1A1A1A] transition-all duration-75 ease-out hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-[#E5B100] hover:shadow-[6px_6px_0px_0px_#1A1A1A] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_#1A1A1A]">
                         <Box className="h-4 w-4 stroke-[2.5]" />
                         <span>MASUK/LOGIN</span>
                     </button>
-                </div>
+                </div> */}
 
                 {/* mobile hamburger button */}
                 <button
@@ -115,13 +116,13 @@ export default function Navbar() {
                                 </Link>
                             );
                         })}
-                        <button
+                        {/* <button
                             onClick={handleLoginClicked}
                             className="flex w-full cursor-pointer items-center justify-center space-x-2 rounded-none border-2 border-[#1A1A1A] bg-[#D4A000] py-3 text-xs font-bold tracking-widest text-[#1A1A1A] shadow-[3px_3px_0px_0px_#1A1A1A] transition-all duration-75 active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_0px_#1A1A1A]"
                         >
                             <Box className="h-4 w-4 stroke-[2.5]" />
                             <span>MASUK/LOGIN</span>
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             )}
