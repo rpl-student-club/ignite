@@ -1,5 +1,5 @@
-import { Head } from "@inertiajs/react";
-import PendaftaranIndex from "@/components/pendaftaran/pendaftaran-index";
+import { Head } from '@inertiajs/react';
+import PendaftaranIndex from '@/components/pendaftaran/pendaftaran-index';
 
 export default function PendaftaranIteach() {
     return (

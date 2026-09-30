@@ -1,5 +1,5 @@
-import { Head, Link, router } from '@inertiajs/react';
-import { iTeach, iGame, register, pendaftaranITeach } from '@/routes';
+import { Head, Link } from '@inertiajs/react';
+import { iTeach, iGame, pendaftaranITeach } from '@/routes';
 import { ArrowRight, Play } from 'lucide-react';
 
 function CtaButton({
@@ -29,7 +29,12 @@ function CtaButton({
 
     if (external) {
         return (
-            <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+            <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+            >
                 {content}
             </a>
         );
@@ -42,46 +47,9 @@ function CtaButton({
     );
 }
 
-// ─── Stat Card ───────────────────────────────────────────────────────────────
-function StatCard({
-    label,
-    value,
-    sub,
-    icon,
-}: {
-    label: string;
-    value: string;
-    sub?: string;
-    icon?: React.ReactNode;
-}) {
-    return (
-        <div className="flex flex-col justify-between bg-[#FFF9EC] p-4 sm:p-5">
-            <div className="mb-3 flex items-start justify-between">
-                <span className="font-mono text-[10px] font-bold tracking-[0.15em] text-[#574143] uppercase">
-                    {label}
-                </span>
-                {icon && (
-                    <span className="text-[#800A2C] opacity-60">{icon}</span>
-                )}
-            </div>
-            <div>
-                <p className="font-grotesk text-3xl font-black leading-none tracking-tight text-[#172238] sm:text-4xl">
-                    {value}
-                </p>
-                {sub && (
-                    <p className="font-jakarta mt-1 text-[10px] font-bold tracking-widest text-[#574143] uppercase">
-                        {sub}
-                    </p>
-                )}
-            </div>
-        </div>
-    );
-}
-
 // ─── Competition Card ─────────────────────────────────────────────────────────
 function CompCard({
     tag,
-    deadline,
     title,
     description,
     detailHref,
@@ -90,7 +58,6 @@ function CompCard({
     ctaExternal,
 }: {
     tag: string;
-    deadline: string;
     title: string;
     description: string;
     detailHref: string;
@@ -111,7 +78,7 @@ function CompCard({
             </div>
 
             {/* Title */}
-            <h3 className="font-grotesk mb-3 text-xl font-black leading-tight tracking-tight text-[#550017] uppercase sm:text-2xl">
+            <h3 className="font-grotesk mb-3 text-xl leading-tight font-black tracking-tight text-[#550017] uppercase sm:text-2xl">
                 {title}
             </h3>
 
@@ -123,13 +90,19 @@ function CompCard({
             {/* Buttons */}
             <div className="flex flex-wrap gap-3">
                 <CtaButton href={detailHref}>
-                    {ctaLabel === 'DISCORD CHANNEL' ? 'LIHAT DETAIL' : 'LIHAT DETAIL'}
+                    {ctaLabel === 'DISCORD CHANNEL'
+                        ? 'LIHAT DETAIL'
+                        : 'LIHAT DETAIL'}
                 </CtaButton>
                 <CtaButton
                     href={ctaHref}
                     primary
                     external={ctaExternal}
-                    icon={ctaLabel === 'DAFTAR SEKARANG' ? <Play className="size-3.5 fill-current" /> : undefined}
+                    icon={
+                        ctaLabel === 'DAFTAR SEKARANG' ? (
+                            <Play className="size-3.5 fill-current" />
+                        ) : undefined
+                    }
                 >
                     {ctaLabel}
                 </CtaButton>
@@ -145,7 +118,6 @@ export default function Welcome() {
             <Head title="IGNITE — Education & Digital Innovation Competition" />
 
             <div className="w-full overflow-x-hidden bg-[#FFF9EC] text-[#1E1E1E]">
-                
                 {/* ── HERO ──────────────────────────────────────────── */}
                 <section
                     id="beranda"
@@ -154,21 +126,21 @@ export default function Welcome() {
                     {/* Decorative Background Blur (Glow) */}
                     <div className="pointer-events-none absolute top-[-5%] right-[-10%] h-[500px] w-[500px] rounded-full bg-[#8A3A3A] opacity-20 blur-[100px]" />
 
-                    <div className="relative z-10 -translate-y-2 flex flex-col items-center justify-center">
+                    <div className="relative z-10 flex -translate-y-2 flex-col items-center justify-center">
                         {/* Main title */}
-                        <h1 
-                            className="font-mono mb-3 text-[42px] font-bold uppercase text-[#550017] sm:text-[42px]"
-                            style={{ 
-                                lineHeight: '1', 
+                        <h1
+                            className="mb-3 font-mono text-[42px] font-bold text-[#550017] uppercase sm:text-[42px]"
+                            style={{
+                                lineHeight: '1',
                                 letterSpacing: '0px',
-                                textShadow: '2px 2px 0px #1E1E1E'
+                                textShadow: '2px 2px 0px #1E1E1E',
                             }}
                         >
                             IGNITE
                         </h1>
 
                         {/* Subtitle badge */}
-                        <div className="mb-1 -rotate-2 border-2 border-[#1E1E1E] bg-[#FFDDB4] px-3 py-1.5 shadow-[3px_3px_0px_0px_#1E1E1E] z-10">
+                        <div className="z-10 mb-1 -rotate-2 border-2 border-[#1E1E1E] bg-[#FFDDB4] px-3 py-1.5 shadow-[3px_3px_0px_0px_#1E1E1E]">
                             <span className="font-mono text-xs font-bold tracking-[0.1em] text-[#1E1E1E] uppercase sm:text-sm">
                                 EDUCATION &amp; DIGITAL INNOVATION COMPETITION
                             </span>
@@ -177,7 +149,8 @@ export default function Welcome() {
                         {/* Tagline badge */}
                         <div className="mb-10 border-2 border-[#1E1E1E] bg-[#FFF9EC] px-3 py-1.5 shadow-[3px_3px_0px_0px_#1E1E1E]">
                             <span className="font-mono text-xs font-bold tracking-[0.1em] text-[#550017] uppercase sm:text-sm">
-                                "IGNITE IDEAS, INSPIRE INNOVATION, SHAPE THE FUTURE."
+                                "IGNITE IDEAS, INSPIRE INNOVATION, SHAPE THE
+                                FUTURE."
                             </span>
                         </div>
 
@@ -196,7 +169,10 @@ export default function Welcome() {
                 </section>
 
                 {/* ── ABOUT ─────────────────────────────────────────── */}
-                <section id="about" className="border-b-4 border-[#1E1E1E] bg-[#FFF9EC] px-5 py-14 sm:px-8 lg:px-12 lg:py-16">
+                <section
+                    id="about"
+                    className="border-b-4 border-[#1E1E1E] bg-[#FFF9EC] px-5 py-14 sm:px-8 lg:px-12 lg:py-16"
+                >
                     <div className="mx-auto max-w-5xl">
                         {/* Main About Box */}
                         <div className="relative border-[3px] border-[#000000] bg-[#F4EDDD] px-8 py-10">
@@ -204,7 +180,7 @@ export default function Welcome() {
                             <div className="absolute -top-2 -left-2 h-4 w-4 rounded-full border-2 border-[#000000] bg-[#FFE087]" />
                             <div className="absolute -top-2 -right-2 h-4 w-4 rounded-full border-2 border-[#000000] bg-[#FFE087]" />
                             <div className="absolute -bottom-2 -left-2 h-4 w-4 rounded-full border-2 border-[#000000] bg-[#FFE087]" />
-                            <div className="absolute -bottom-2 -right-2 h-4 w-4 rounded-full border-2 border-[#000000] bg-[#FFE087]" />
+                            <div className="absolute -right-2 -bottom-2 h-4 w-4 rounded-full border-2 border-[#000000] bg-[#FFE087]" />
 
                             {/* Header row */}
                             <div className="mb-5 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
@@ -218,9 +194,11 @@ export default function Welcome() {
 
                             {/* Description */}
                             <p className="font-jakarta text-sm leading-7 text-[#172238] sm:text-base">
-                                IGNITE 2026 merupakan kompetisi inovasi pendidikan dan teknologi digital bagi
-                                mahasiswa Indonesia untuk menghadirkan ide kreatif, inovatif, aplikatif, dan
-                                berdampak dalam menjawab tantangan pendidikan di era digital.
+                                IGNITE 2026 merupakan kompetisi inovasi
+                                pendidikan dan teknologi digital bagi mahasiswa
+                                Indonesia untuk menghadirkan ide kreatif,
+                                inovatif, aplikatif, dan berdampak dalam
+                                menjawab tantangan pendidikan di era digital.
                             </p>
                         </div>
 
@@ -232,12 +210,14 @@ export default function Welcome() {
                                     <span className="font-mono text-[9px] font-bold tracking-[0.15em] text-[#574143] uppercase">
                                         CHALLENGES
                                     </span>
-                                    <span className="text-[#550017] opacity-70">⊞</span>
+                                    <span className="text-[#550017] opacity-70">
+                                        ⊞
+                                    </span>
                                 </div>
-                                <p className="font-grotesk text-4xl font-black leading-none text-[#550017]">
+                                <p className="font-grotesk text-4xl leading-none font-black text-[#550017]">
                                     02
                                 </p>
-                                <p className="font-mono mt-2 text-[9px] font-bold tracking-[0.15em] text-[#574143] uppercase">
+                                <p className="mt-2 font-mono text-[9px] font-bold tracking-[0.15em] text-[#574143] uppercase">
                                     COMPETITION
                                 </p>
                             </div>
@@ -248,12 +228,14 @@ export default function Welcome() {
                                     <span className="font-mono text-[9px] font-bold tracking-[0.15em] text-[#574143] uppercase">
                                         BOUNTY
                                     </span>
-                                    <span className="text-[#550017] opacity-70">◎</span>
+                                    <span className="text-[#550017] opacity-70">
+                                        ◎
+                                    </span>
                                 </div>
-                                <p className="font-grotesk text-4xl font-black leading-none text-[#550017]">
+                                <p className="font-grotesk text-4xl leading-none font-black text-[#550017]">
                                     75M+
                                 </p>
-                                <p className="font-mono mt-2 text-[9px] font-bold tracking-[0.15em] text-[#574143] uppercase">
+                                <p className="mt-2 font-mono text-[9px] font-bold tracking-[0.15em] text-[#574143] uppercase">
                                     TOTAL PRIZE POOL (IDR)
                                 </p>
                             </div>
@@ -264,12 +246,14 @@ export default function Welcome() {
                                     <span className="font-mono text-[9px] font-bold tracking-[0.15em] text-[#574143] uppercase">
                                         TERBUKA UNTUK
                                     </span>
-                                    <span className="text-[#550017] opacity-70">◈</span>
+                                    <span className="text-[#550017] opacity-70">
+                                        ◈
+                                    </span>
                                 </div>
-                                <p className="font-grotesk text-3xl font-black leading-none text-[#550017] sm:text-4xl">
+                                <p className="font-grotesk text-3xl leading-none font-black text-[#550017] sm:text-4xl">
                                     MAHASISWA
                                 </p>
-                                <p className="font-mono mt-2 text-[9px] font-bold tracking-[0.15em] text-[#574143] uppercase">
+                                <p className="mt-2 font-mono text-[9px] font-bold tracking-[0.15em] text-[#574143] uppercase">
                                     DARI BERBAGAI PERGURUAN TINGGI DI INDONESIA
                                 </p>
                             </div>
@@ -278,9 +262,12 @@ export default function Welcome() {
                 </section>
 
                 {/* ── SELECT CHALLENGE ──────────────────────────────── */}
-                <section id="challenges" className="border-b-4 border-[#1E1E1E] bg-[#FFF9EC] px-5 py-14 sm:px-8 lg:px-12 lg:py-16">
+                <section
+                    id="challenges"
+                    className="border-b-4 border-[#1E1E1E] bg-[#FFF9EC] px-5 py-14 sm:px-8 lg:px-12 lg:py-16"
+                >
                     <div className="mx-auto max-w-5xl">
-                        <p className="font-mono mb-2 text-[9px] font-bold tracking-[0.25em] text-[#800A2C] uppercase">
+                        <p className="mb-2 font-mono text-[9px] font-bold tracking-[0.25em] text-[#800A2C] uppercase">
                             ▸ SELECT STAGE TO DEPLOY
                         </p>
                         <h2 className="font-grotesk mb-8 text-3xl font-black tracking-tight text-[#172238] uppercase sm:text-4xl lg:text-5xl">
@@ -290,7 +277,6 @@ export default function Welcome() {
                         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                             <CompCard
                                 tag="DEADLINE: 1 OKT 2026"
-                                deadline="AUG 15 – OCT 20"
                                 title="ITEACH — INNOVATIVE TECHNOLOGY-ENHANCED TEACHING CHALLENGE"
                                 description="Tantangan merancang media pembelajaran interaktif berbasis web, AI pedagogi adaptif, atau simulasi/edukasi interaktif untuk merevolusi ekosistem kelas dan memecahkan disparitas belajar di Indonesia."
                                 detailHref={iTeach().url}
@@ -299,7 +285,6 @@ export default function Welcome() {
                             />
                             <CompCard
                                 tag="DEADLINE: 1 OKT 2026"
-                                deadline="AUG 15 – OCT 20"
                                 title="IGAME — ISOLA GAME JAM"
                                 description="Tantangkan diri merancang dan mengimplementasikan game indie original dalam 48 jam turut-turun sesuai tema misteri yang dirilis serentak."
                                 detailHref={iGame().url}
@@ -325,22 +310,23 @@ export default function Welcome() {
                             </div>
 
                             <div className="mx-auto max-w-2xl">
-                                <h2 className="font-grotesk mb-4 text-4xl font-black italic tracking-tight text-[#FFF9EC] uppercase sm:text-5xl lg:text-6xl">
+                                <h2 className="font-grotesk mb-4 text-4xl font-black tracking-tight text-[#FFF9EC] uppercase italic sm:text-5xl lg:text-6xl">
                                     READY PLAYER?
                                 </h2>
                                 <p className="font-grotesk mb-4 text-sm font-bold tracking-widest text-[#FFE087] uppercase sm:text-base">
-                                    PILIH MISIMU. CIPTAKAN KARYA BERDAMPAK. NYALAKAN INOVASIMU!
+                                    PILIH MISIMU. CIPTAKAN KARYA BERDAMPAK.
+                                    NYALAKAN INOVASIMU!
                                 </p>
                                 <p className="font-jakarta text-sm leading-relaxed text-[#f4cdd0] sm:text-base">
-                                    Pendaftaran dibuka untuk seluruh mahasiswa perguruan tinggi di
-                                    Indonesia. Bentuk tim terbaikmu dan kirimkan proposal sebelum slot
+                                    Pendaftaran dibuka untuk seluruh mahasiswa
+                                    perguruan tinggi di Indonesia. Bentuk tim
+                                    terbaikmu dan kirimkan proposal sebelum slot
                                     kualifikasi habis.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </section>
-
             </div>
         </>
     );
