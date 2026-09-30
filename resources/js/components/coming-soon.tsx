@@ -1,8 +1,16 @@
 interface ComingSoonProps {
     description: string;
+    isComingSoon: boolean;
 }
 
-export default function ComingSoon({ description }: ComingSoonProps) {
+export default function ComingSoon({
+    description,
+    isComingSoon,
+}: ComingSoonProps) {
+    if (!isComingSoon) {
+        return null;
+    }
+
     const nailPositions = [
         'top-3 left-3',
         'top-3 right-3',

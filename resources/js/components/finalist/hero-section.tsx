@@ -46,19 +46,6 @@ export default function HeroSection() {
                     </span>
                 </div>
             </div>
-
-            {/* salah cuyy wkwkw */}
-            {/* <div className="bg-amber-100/40 border border-gray-400/40 border-l-8 rounded-none p-5 md:p-6 space-y-2">
-                <div className="flex items-center gap-2">
-                    <Megaphone className="w-4 h-4 text-[#550017]" />
-                    <span className="text-xs font-black tracking-widest uppercase text-[#550017]">
-                        KETERANGAN RESMI DEWAN JURI
-                    </span>
-                </div>
-                <p className="font-jakarta text-sm md:text-base text-gray-800 leading-relaxed">
-                    Selamat kepada tim yang berhasil terseleksi. Seluruh tim yang tercantum berhak melanjutkan ke babak final demonstrasi interaktif luring di Kampus UPI Bandung pada tanggal 12–14 November 2026.
-                </p>
-            </div> */}
         </section>
     );
 }
